@@ -439,6 +439,7 @@
                     elementsList = removeFromArray(elementsList, elementDropped);
                     elementDropped.parentNode.removeChild(elementDropped);
                     updateScore(50);
+                    createCheckmarkOn(itemType);
                     lostCount = 0;
                 } else {
                     $(elementDropped).draggable('disable');
