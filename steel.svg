@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns1="http://sozi.baierouge.fr" id="svg2" viewBox="0 0 153.27 173.42" version="1.1">
+  <defs id="defs4">
+    <linearGradient id="linearGradient3951" y2="46.699" gradientUnits="userSpaceOnUse" y1="147.22" x2="51.261" x1="148.51">
+      <stop id="stop3947" stop-color="#c1d2d1" offset="0"/>
+      <stop id="stop3949" stop-color="#f0f5f5" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient3959" y2="62.413" gradientUnits="userSpaceOnUse" y1="133.95" x2="140.04" x1="57.452">
+      <stop id="stop3955" stop-color="#ecf1f2" offset="0"/>
+      <stop id="stop3965" stop-color="#d9e5e7" offset=".10443"/>
+      <stop id="stop3963" stop-color="#c8d9db" offset=".38424"/>
+      <stop id="stop3961" stop-color="#ebf2f3" offset=".51505"/>
+      <stop id="stop3967" stop-color="#c8d9db" offset=".68544"/>
+      <stop id="stop3957" stop-color="#e4eced" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient3975" y2="152.78" gradientUnits="userSpaceOnUse" y1="138.1" x2="49.018" x1="61.872">
+      <stop id="stop3971" stop-color="#dce3e4" offset="0"/>
+      <stop id="stop3973" stop-color="#425558" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient3983" y2="174.42" gradientUnits="userSpaceOnUse" y1="152.6" x2="117.39" x1="112.97">
+      <stop id="stop3979" stop-color="#adb7b9" offset="0"/>
+      <stop id="stop3981" stop-color="#58676e" offset="1"/>
+    </linearGradient>
+    <radialGradient id="radialGradient3991" gradientUnits="userSpaceOnUse" cy="54.042" cx="135.63" gradientTransform="matrix(-.0065562 .88382 -.92487 -.0068612 150.86 -30.575)" r="40.26">
+      <stop id="stop3987" stop-color="#fff" offset="0"/>
+      <stop id="stop3993" stop-color="#618692" offset=".93916"/>
+      <stop id="stop3995" stop-color="#c0cacf" offset=".97359"/>
+      <stop id="stop3989" stop-color="#e5ecf0" stop-opacity=".16935" offset="1"/>
+    </radialGradient>
+    <linearGradient id="linearGradient4005" y2="91.687" gradientUnits="userSpaceOnUse" y1="86.996" x2="120.92" x1="93.636">
+      <stop id="stop3999" stop-color="#737f83" offset="0"/>
+      <stop id="stop4001" stop-color="#b1bcc2" offset="1"/>
+    </linearGradient>
+  </defs>
+  <g id="layer1" transform="translate(-24.346 -14.76)">
+    <path id="path3921" style="color:#000000" fill="url(#linearGradient4005)" d="m116.1 56.798c-18.086-4.846-50.791 2.968-55.637 21.054-4.846 18.087 12.676 74.428 30.762 79.268 18.086 4.8462 42.477-28.26 47.324-46.347 4.8462-18.086-4.3618-49.132-22.448-53.978zm-8.42 38.922c15.826 4.2404 25.217 20.507 20.977 36.333-4.2404 15.826-20.507 25.217-36.333 20.977-15.828-4.24-25.219-20.51-20.979-36.33 4.241-15.83 20.507-25.22 36.335-20.98z"/>
+    <path id="path2995" style="color:#000000" fill="url(#linearGradient3951)" d="m117.92 31.72-19.052 0.65839-12.606 3.5881-12.843 2.5199-21.73 10.235-10.248 27.963-6.9589 40.115 22.651 18.442 24.531 27.8 34.028-12.109 32.358-2.4558 10.378-41.06 6.0467-22.291-11.292-20.445-12.171-13.804-7.2008-8.1132zm-8.8605 26.847c18.671 5.003 29.752 24.195 24.749 42.866s-24.195 29.752-42.866 24.749c-18.673-5-29.753-24.19-24.75-42.864 5.003-18.671 24.194-29.751 42.867-24.748z"/>
+    <path id="path3001" style="color:#000000" fill="url(#linearGradient3959)" d="m115.53 34.419c-32.009-8.576-64.909 10.419-73.486 42.427-8.576 32.004 10.419 64.904 42.427 73.484 32.009 8.58 64.909-10.42 73.489-42.43 8.57-32.004-10.42-64.904-42.43-73.481zm-6.4705 24.148c18.671 5.003 29.752 24.195 24.749 42.866s-24.195 29.752-42.866 24.749c-18.673-5-29.753-24.19-24.75-42.864 5.003-18.671 24.194-29.751 42.867-24.748z"/>
+    <path id="path2989" style="color:#000000" fill="url(#radialGradient3991)" d="m110.35 53.738c-21.339-5.7177-43.272 6.9456-48.99 28.284-5.7177 21.339 6.9456 43.272 28.284 48.99 21.339 5.7177 43.272-6.9456 48.99-28.284 5.7177-21.339-6.9456-43.272-28.284-48.99zm-1.2941 4.8296c18.671 5.003 29.752 24.195 24.749 42.866s-24.195 29.752-42.866 24.749c-18.673-5-29.753-24.19-24.75-42.864 5.003-18.671 24.194-29.751 42.867-24.748z"/>
+    <path id="path3923" fill="url(#linearGradient3975)" d="m34.346 116.46 8.0463 19.919c5.43 13.442 25.161 30.021 41.653 41.73l-2.375-15.03c-15.456-21.26-31.348-36.27-47.324-46.62z"/>
+    <path id="path3925" fill="url(#linearGradient3983)" d="m81.645 162.92c18.345-9.4172 47.001-17.156 66.492-14.685l-5.3166 14.435c-19.442 11.856-38.956 15.347-58.763 15.509z"/>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Nut</dc:title>
+        <dc:date>2013-09-08T23:07:21</dc:date>
+        <dc:description>Hexagonal nut to be used with a bolt</dc:description>
+        <dc:source>https://openclipart.org/detail/183223/nut-by-mi_brami-183223</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>mi_brami</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Nut</rdf:li>
+            <rdf:li>bolt</rdf:li>
+            <rdf:li>harware</rdf:li>
+            <rdf:li>hexagonal</rdf:li>
+            <rdf:li>metal</rdf:li>
+            <rdf:li>perspective</rdf:li>
+            <rdf:li>realistic</rdf:li>
+            <rdf:li>screw</rdf:li>
+            <rdf:li>steel</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

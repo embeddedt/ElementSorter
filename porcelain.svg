@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns1="http://sozi.baierouge.fr" id="svg2" sodipodi:docname="badApplesButtons200px.svg" viewBox="0 0 744.09 1052.4" sodipodi:version="0.32" version="1.1" inkscape:output_extension="org.inkscape.output.svg.inkscape" inkscape:version="0.47pre4 r22446">
+  <defs id="defs4">
+    <filter id="filter3524" inkscape:collect="always">
+      <feGaussianBlur id="feGaussianBlur3526" stdDeviation="1.2778412" inkscape:collect="always"/>
+    </filter>
+    <filter id="filter3472" height="1.3465" width="1.1057" y="-.17325" x="-.052871" inkscape:collect="always">
+      <feGaussianBlur id="feGaussianBlur3474" stdDeviation="2.4073357" inkscape:collect="always"/>
+    </filter>
+    <linearGradient id="linearGradient3278">
+      <stop id="stop3280" style="stop-color:#000000" offset="0"/>
+      <stop id="stop3282" style="stop-color:#ffffff" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient3470" y2="329.74" xlink:href="#linearGradient3278" gradientUnits="userSpaceOnUse" x2="287.78" y1="433.38" x1="289.91" inkscape:collect="always"/>
+    <linearGradient id="linearGradient3474" y2="448.38" xlink:href="#linearGradient3278" gradientUnits="userSpaceOnUse" x2="290.64" y1="474.77" x1="286.93" inkscape:collect="always"/>
+    <linearGradient id="linearGradient3478" y2="350.78" xlink:href="#linearGradient3278" gradientUnits="userSpaceOnUse" x2="212.36" y1="576" x1="292.69" inkscape:collect="always"/>
+    <linearGradient id="linearGradient2967" y2="407.76" xlink:href="#linearGradient3278" gradientUnits="userSpaceOnUse" x2="271.06" gradientTransform="matrix(2.249 0 0 2.249 -307.84 -513.93)" y1="398.01" x1="495.94" inkscape:collect="always"/>
+    <radialGradient id="radialGradient2971" xlink:href="#linearGradient3278" gradientUnits="userSpaceOnUse" cy="400.59" cx="374.11" gradientTransform="matrix(1.1273 .77651 -1.5328 2.2253 725.8 -794.96)" r="31.394" inkscape:collect="always"/>
+    <linearGradient id="linearGradient2978" y2="386.94" xlink:href="#linearGradient3278" gradientUnits="userSpaceOnUse" x2="383.73" y1="524.44" x1="428.88" inkscape:collect="always"/>
+    <linearGradient id="linearGradient2980" y2="386.94" xlink:href="#linearGradient3278" gradientUnits="userSpaceOnUse" x2="383.73" y1="486.96" x1="389.05" inkscape:collect="always"/>
+  </defs>
+  <sodipodi:namedview id="base" bordercolor="#666666" inkscape:pageshadow="2" guidetolerance="10" pagecolor="#ffffff" gridtolerance="10000" inkscape:window-height="742" inkscape:window-maximized="0" inkscape:zoom="0.95697327" objecttolerance="10" showgrid="false" borderopacity="1.0" inkscape:current-layer="layer1" inkscape:cx="356.59128" inkscape:cy="628.5323" inkscape:window-y="-3" inkscape:window-x="-5" inkscape:window-width="1280" inkscape:pageopacity="0.0" inkscape:document-units="px"/>
+  <g id="layer1" inkscape:label="Layer 1" inkscape:groupmode="layer">
+    <flowRoot id="flowRoot3519" xml:space="preserve" style="font-size:40px;font-family:Sans;fill:#000000">
+      <flowRegion id="flowRegion3521">
+        <rect id="rect3523" y="368.96" width="83.597" x="177.64" height="47.023"/>
+      </flowRegion>
+      <flowPara id="flowPara3525"/>
+    </flowRoot>
+    <flowRoot id="flowRoot3527" xml:space="preserve" style="font-size:40px;font-family:Sans;fill:#000000">
+      <flowRegion id="flowRegion3529">
+        <rect id="rect3531" y="367.91" width="82.552" x="178.69" height="51.203"/>
+      </flowRegion>
+      <flowPara id="flowPara3533">Cranksdd</flowPara>
+    </flowRoot>
+    <text id="text3563" y="443.14978" x="243.47597" xml:space="preserve" style="font-size:40px;font-family:Sans;fill:#000000">
+      <tspan id="tspan3567" sodipodi:role="line"/>
+    </text>
+    <path id="path3318" sodipodi:rx="121.07826" sodipodi:ry="40.017391" style="fill-rule:evenodd;filter:url(#filter3524);stroke-width:0;fill:url(#linearGradient2980)" sodipodi:type="arc" d="m418.13 433.63a121.08 40.017 0 1 1 -242.16 0 121.08 40.017 0 1 1 242.16 0z" inkscape:export-ydpi="90" inkscape:export-filename="/home/sxe/Pictures/LinguistCast/linguistCoffee.png" transform="matrix(2.2014 0 0 2.2782 -289.77 -486.22)" sodipodi:cy="433.63174" sodipodi:cx="297.05219" inkscape:export-xdpi="90"/>
+    <path id="path3250" sodipodi:rx="121.07826" sodipodi:ry="40.017391" style="fill-rule:evenodd;fill:url(#linearGradient2978)" sodipodi:type="arc" d="m418.13 433.63a121.08 40.017 0 1 1 -242.16 0 121.08 40.017 0 1 1 242.16 0z" inkscape:export-ydpi="90" inkscape:export-filename="/home/sxe/Pictures/LinguistCast/linguistCoffee.png" transform="matrix(2.249 0 0 2.249 -303.88 -479.19)" sodipodi:cy="433.63174" sodipodi:cx="297.05219" inkscape:export-xdpi="90"/>
+    <path id="path3276" sodipodi:rx="67.978264" sodipodi:ry="13.082608" style="fill-rule:evenodd;fill:url(#linearGradient3470)" sodipodi:type="arc" d="m360.67 356.42a67.978 13.083 0 1 1 -135.96 0 67.978 13.083 0 1 1 135.96 0z" inkscape:export-ydpi="90" inkscape:export-filename="/home/sxe/Pictures/LinguistCast/linguistCoffee.png" transform="matrix(2.249 0 0 2.249 -305.53 -515.09)" sodipodi:cy="356.4187" sodipodi:cx="292.69131" inkscape:export-xdpi="90"/>
+    <path id="path3248" style="fill-rule:evenodd;fill:url(#radialGradient2971)" d="m500.98 310.14-4.6152 47.306c48.014-53.518 58.262-34.936 73.844-26.538 20.712 45.544-19.84 93.445-92.305 111.92l-15 32.307c25.36-9.354 157.11-44.224 139.61-129.23-7.6886-14.428-11.68-70.893-101.54-35.768z" inkscape:export-ydpi="90" sodipodi:nodetypes="ccccccc" inkscape:export-filename="/home/sxe/Pictures/LinguistCast/linguistCoffee.png" inkscape:export-xdpi="90"/>
+    <path id="path3252" sodipodi:rx="54.63913" sodipodi:ry="16.673912" style="filter:url(#filter3472);fill-rule:evenodd;fill:url(#linearGradient3474)" sodipodi:type="arc" d="m345.28 452.87a54.639 16.674 0 1 1 -109.28 0 54.639 16.674 0 1 1 109.28 0z" inkscape:export-ydpi="90" inkscape:export-filename="/home/sxe/Pictures/LinguistCast/linguistCoffee.png" transform="matrix(1.9996 0 0 2.0547 -229.6 -438.64)" sodipodi:cy="452.87088" sodipodi:cx="290.63913" inkscape:export-xdpi="90"/>
+    <path id="path2472" style="fill-rule:evenodd;fill:url(#linearGradient2967)" d="m199.84 284.75c9.3329 67.799 1.7922 136.37 57.691 209.99 50.842 36.017 144.33 36.686 189.23-4.6153 64.895-75.109 42.143-136.19 57.691-203.07" inkscape:export-ydpi="90" sodipodi:nodetypes="cccc" inkscape:export-filename="/home/sxe/Pictures/LinguistCast/linguistCoffee.png" inkscape:export-xdpi="90"/>
+    <path id="path3254" sodipodi:rx="64.643478" sodipodi:ry="9.4913044" style="fill-rule:evenodd;stroke:#552207;stroke-width:2;fill:#321c0c" sodipodi:type="arc" d="m358.62 357.44a64.643 9.4913 0 1 1 -129.29 0 64.643 9.4913 0 1 1 129.29 0z" inkscape:export-ydpi="90" inkscape:export-filename="/home/sxe/Pictures/LinguistCast/linguistCoffee.png" transform="matrix(2.249 0 0 2.249 -310.15 -510.59)" sodipodi:cy="357.44479" sodipodi:cx="293.97391" inkscape:export-xdpi="90"/>
+    <path id="path2470" sodipodi:rx="67.978264" sodipodi:ry="13.082608" style="stroke:url(#linearGradient3478);stroke-width:3;fill:none" sodipodi:type="arc" d="m360.67 356.42a67.978 13.083 0 1 1 -135.96 0 67.978 13.083 0 1 1 135.96 0z" inkscape:export-ydpi="90" inkscape:export-filename="/home/sxe/Pictures/LinguistCast/linguistCoffee.png" transform="matrix(2.2154 0 0 2.2508 -298.01 -512.28)" sodipodi:cy="356.4187" sodipodi:cx="292.69131" inkscape:export-xdpi="90"/>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>tea cup</dc:title>
+        <dc:date>2010-08-15T21:37:07</dc:date>
+        <dc:description>white porcelain tea cup</dc:description>
+        <dc:source>https://openclipart.org/detail/80773/tea-cup-by-notklaatu</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>notKlaatu</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>cup</rdf:li>
+            <rdf:li>tea</rdf:li>
+            <rdf:li>tea cup</rdf:li>
+            <rdf:li>white</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

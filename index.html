@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Element Extravaganza</title>
+        <meta charset="UTF-8">
+        <meta content='width=device-width, initial-scale=1.0' name='viewport' />
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <style type="text/css">
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+
+            #wrapper {
+                min-height: 100%; 
+            }
+        </style>
+        <!--[if lte IE 6]>
+            <style type="text/css">
+                #container {
+                    height: 100%;
+                }
+            </style>
+        <![endif]-->
+        <style>
+            html, body {
+                overflow-x: hidden;
+                display: block;
+            }
+            body {
+                position: relative;
+                display: block;
+            }
+            #root-container {
+                min-height: 100%;
+                min-width: 300px;
+                background-image: url("lab_scene.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                overflow: hidden;
+                position: relative;
+                display: block;
+            }
+            .categories {
+            }
+            .elements {
+                white-space: nowrap;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .element-type {
+                position: relative;
+                margin: 5px;
+                border-style: solid;
+                vertical-align: middle;
+                display: block;
+                border-width: 4px;
+                width: 100px;
+                height: 100px;
+                border-radius: 5px;
+                border-color: rgb(128, 128, 128);
+                font: 50px 'Fira Sans', sans-serif;
+                color: yellow;
+            }
+            #element {
+                background-color: red;
+            }
+            #compound {
+                background-color: blue;
+            }
+            #mixture {
+                background-color: green;
+            }
+            #conveyor-area {
+                position: absolute;
+                bottom: 8px;
+                width: 300px;
+                height: 122px;
+                left: 0px;
+                display: block;
+            }
+            #conveyor-belt {
+                position: absolute;
+                width: 300px;
+                height: auto;
+                top: 0;
+                left: -1px;
+                display: block;
+            }
+            
+            .item {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                top: -70px;
+                left: 0;
+                z-index: 10;
+                cursor:move;
+                display: block;
+                text-align: center;
+            }
+            .itemImg {
+                max-width:100%;
+                max-height:100%;
+                text-align: center;
+                margin: 0 auto;
+                vertical-align: bottom;
+                bottom: 0;
+                width: 100%;
+                height: auto;
+                position: absolute;
+                left: 0;
+            }
+            .itemText {
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                top: 0;
+                font-size: 22px;
+                top: -50px;
+                color: black;
+                font-weight: bold;
+            }
+            #scoreText {
+                position:relative;
+                margin:0 auto;
+                clear:left;
+                height:auto;
+                z-index: 0;
+                text-align:center;
+                font-size: 40px;
+            }
+            .box-type {
+                width: 100%;
+            }
+            .box-description {
+                width: 100%;
+                font-size: 16px;
+            }
+            h1 {
+                font: 42px 'Fira Sans', sans-serif;
+                margin: 10px;
+            }
+            img {
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -o-user-select: none;
+                user-select: none;
+            }
+            .ui-dialog-titlebar-close {
+                width: 40px !important;
+                height: 40px !important;
+                top: 35% !important
+            }
+            .ui-dialog .ui-dialog-titlebar {
+                height: 30px;
+                line-height: 30px;
+            }
+            .ui-dialog-titlebar {
+                font-size: 20px;
+                
+            }
+            #lostDialog {
+                display: none;
+            }
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: auto;
+            }
+        </style>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.4/seedrandom.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="jquery.ui.touch-punch.min.js"></script>
+        <script>
+            var score = 0;
+            var startX = -100;
+            var timeout = [];
+            var startY = -70;
+            var firstStart = true;
+            var elementsList = [];
+            var lostCount = 0;
+
+            
+            /* JS object holding game objects and their types */
+            function GameObject(name, type)
+            {
+                this.name = name;
+                this.type = type;
+            }
+            /* List of usable objects */
+            var objectList = [
+                new GameObject('oxygen', 'element'), // 0
+                new GameObject('milk', 'mixture'),
+                new GameObject('blood', 'mixture'),
+                new GameObject('carbon', 'element'), // 3
+                new GameObject('helium', 'element'),
+                new GameObject('salt', 'compound'),
+                new GameObject('sugar', 'compound'), // 6
+                new GameObject('water', 'compound'),
+                new GameObject('air', 'mixture'),
+                new GameObject('gold', 'element'),   // 9
+                new GameObject('neon', 'element'),
+                new GameObject('orange juice', 'mixture'),
+                new GameObject('baking soda', 'compound'), // 12
+                new GameObject('brass', 'mixture'),
+                new GameObject('iron', 'element'),
+                new GameObject('steel', 'mixture'), // 15
+                new GameObject('carbon dioxide', 'compound'),
+                new GameObject('porcelain', 'compound'),
+                new GameObject('uranium', 'element'),//18
+                new GameObject('sulfuric acid', 'compound'),
+                new GameObject('ketchup', 'compound'),
+                new GameObject('bleach', 'compound'),//21
+                new GameObject('ethanol', 'compound'),
+                new GameObject('smoke', 'mixture'),
+                new GameObject('cement', 'mixture'),// 24
+                new GameObject('chrome', 'mixture'),
+                new GameObject('cream', 'mixture'), // 26
+                new GameObject('maple syrup', 'mixture') //27
+                
+            ];
+            
+            function createCheckmarkOn(name) {
+                var checkmark = document.createElement('img');
+                checkmark.src = "checkmark.svg";
+                checkmark.classList.add("checkmark");
+                $("#" + name)[0].appendChild(checkmark);
+                setTimeout(function() {
+                    checkmark.parentNode.removeChild(checkmark);
+                }, 2000);
+            } 
+            /* Add random function to array */
+            Array.prototype.random = function () {
+                return this[Math.floor((Math.random()*this.length))];
+            };
+            function updateScore(increment) {
+                /* Adjust the score and put the result on the screen */
+                score += increment;
+                document.getElementById('scoreText').innerHTML = "Score: " + score;
+            }
+            /* Move an element (unless it's being dragged) */
+            function loopForElement(element) {
+                
+                if($(element).is('.ui-draggable-dragging') || $(element).is(':animated')) {
+                    return;
+                }
+                var x_pos, y_pos;
+                /* Retrieve values from element */
+                x_pos = parseInt(element.getAttribute('data-x'));
+                y_pos = parseInt(element.getAttribute('data-y'));
+                element.style.left = startX+x_pos+'px';
+                element.style.top = startY+y_pos+'px';
+                /* Keep the element moving across the screen till it reaches the
+                 * end of the conveyor belt. Then make it fall off the screen.
+                 * Like in real life, if you have fast enough reflexes, you can
+                 * catch it before it is destroyed, but you have to be really fast.
+                 */
+                if((startX+x_pos) < 250)
+                    x_pos+=10;
+                if((startX+x_pos) >= 250)
+                    y_pos+=20;
+                else
+                    y_pos += 1;
+                if(y_pos > 250) {
+                    /* Element is destroyed. Lose points here. */
+                    elementsList = removeFromArray(elementsList, element);
+                    element.parentNode.removeChild(element);
+                    updateScore(-50);
+                    lostCount++;
+                } else {
+                    /* Store values to element */
+                    element.setAttribute('data-x', x_pos);
+                    element.setAttribute('data-y', y_pos);
+                }
+            }
+            /* Add a new element to the conveyor belt. Elements are initially
+             * created off screen (as evidenced by a negative startX).
+             */
+            function genNewElement() {
+                var div = document.createElement('div');
+                var myObject = objectList.random();
+                var extension = '.svg';
+                if(myObject.name === "sugar" || myObject.name === "cement")
+                    extension = '.png';
+                
+                div.classList.add('item');
+                div.setAttribute('data-chemtype', myObject.type);
+                div.setAttribute('data-x', 0);
+                div.setAttribute('data-y', 0);
+                document.getElementById('conveyor-area').appendChild(div);
+                div.style.left = startX+"px";
+                div.style.top = startY+"px";
+                
+                var img = document.createElement('img');
+                img.setAttribute('src', myObject.name + extension);
+                img.setAttribute('alt', 'Item');
+                img.classList.add('itemImg');
+                div.appendChild(img);
+                
+                if(myObject.name !== 'salt' && myObject.name !== 'sugar' &&
+                        myObject.name !== 'sulfuric acid') {
+                    var textElement = document.createElement('div');
+                    textElement.classList.add('itemText');
+                    var text = document.createTextNode(myObject.name);
+                    textElement.appendChild(text);
+                    div.appendChild(textElement);
+                }
+                $( div ).draggable({
+                    stop: function() {
+                        /* Element is destroyed. Lose points here. */
+                        var element = $(this)[0];
+                        
+                        
+                        if(element.parentNode === null) {
+                            /* Element was removed by drop function */
+                            return;
+                        }
+                        $(element).draggable('disable');
+                        $(element).effect("shake");
+                        /* When the effect is done destroy the element */
+                        $(element).promise().done(function() {
+                            elementsList = removeFromArray(elementsList, element);
+                            if(element.parentNode !== null)
+                                element.parentNode.removeChild(element);
+                            updateScore(-50);
+                            lostCount++;
+                        });
+                    }
+                });
+                elementsList.push(div);
+            }
+            /* Loop through all elements on the conveyor belt and adjust their
+             * positions.
+             */
+            function loop() {
+                if(lostCount > 15) {
+                    clearTimeout(timeout[0]);
+                    clearTimeout(timeout[1]);
+                    $("#lostDialog").dialog();
+                }
+                for(var i = 0; i < elementsList.length; i++)
+                {
+                    var element = elementsList[i];
+                    loopForElement(element);
+                }
+            }
+            /* Calculate the new delay for the main loop (loop()). */
+            function recalcDelayMain() {
+                var delay = 400;
+                if(score !== 0) {
+                    if(score < 0) {
+                        var multiplier = (Math.abs(score) / 700);
+                        if(multiplier >= 1)
+                            delay *=  multiplier;
+                    } else {
+                        var divider = (score / 200);
+                        if(divider >= 1)
+                            delay /= divider;
+                    }
+                }
+                return delay;
+            }
+            /* Calculate the new delay till the next item is generated. */
+            function recalcDelayGen() {
+                return recalcDelayMain() * (3000/200);
+            }
+            /* This function is used to bootstrap the next call of a looped
+             * function.
+             */
+            function loopHelper(funcToCall, timeoutFunc, index) {
+                funcToCall();
+                timeout[index] = setTimeout(function () {
+                    loopHelper(funcToCall, timeoutFunc, index);
+                }, timeoutFunc());
+            }
+            /* Called to resume a game. Extra actions are taken on the first
+             * start.
+             */
+            function gameResume() {
+                if(firstStart) {
+                    $.ajax({
+                        "type": "GET",
+                        "url": "https://www.random.org/integers/?num=1"
+                                + "&min=-1000000000&max=1000000000&col=1&base=10"
+                                + "&format=plain&rnd=new",
+                        "success": function( data, status, xhr ){
+                            /* Seed the local RNG with the retrieved number. */
+                            Math.seedrandom(parseInt( data ) );
+                        },
+                        "error": function() {
+                            /* Seed the local RNG with local data. */
+                            Math.seedrandom();
+                        }
+                    });
+                    /* Update the score for the first time. */
+                    updateScore(0);
+                    /* Kickstart the element generation loop. */
+                    loopHelper(genNewElement, recalcDelayGen, 1);
+                    firstStart = false;
+                } else {
+                    /* Wait one delay before kickstarting the element generation
+                     * loop.
+                     * This prevents an issue where a pile of elements is
+                     * generated by fast tab switching.
+                     */
+                    timeout[1] = setTimeout(function () {
+                        loopHelper(genNewElement, recalcDelayGen, 1);
+                    }, recalcDelayGen());
+                }
+                /* Kickstart the main movement loop. */
+                loopHelper(loop, recalcDelayMain, 0);
+            };
+            /* Helper function to remove an element from an array.
+             * Must be used like:
+             *  array = removeFromArray(array, element);
+             * Otherwise the original array won't be updated.
+             */
+            function removeFromArray(arrOriginal, element){
+                return arrOriginal.filter(function(el){return el !== element;});
+            }
+            /* Callback when an element is dropped on a category box. */
+            function droppedElement(event, ui)
+            {
+                var elementDropped = $(ui.draggable)[0];
+                /* Retrieve the two element types. */
+                var myType = this.id;
+                var itemType = elementDropped.getAttribute('data-chemtype');
+                /* Get rid of the element and update the score. */
+                
+                if(itemType === myType) {
+                    elementsList = removeFromArray(elementsList, elementDropped);
+                    elementDropped.parentNode.removeChild(elementDropped);
+                    updateScore(50);
+                    lostCount = 0;
+                } else {
+                    $(elementDropped).draggable('disable');
+                    $(elementDropped).effect("shake");
+                    $(elementDropped).promise().done(function() {
+                        createCheckmarkOn(itemType);
+                        elementsList = removeFromArray(elementsList, elementDropped);
+                        elementDropped.parentNode.removeChild(elementDropped);
+                        lostCount++;
+                    });
+                    updateScore(-50);
+                    
+                }
+            }
+            /* Initial bootstrap function. Called when page is loaded. */
+            $( function() {
+                $(window).resize(function() {
+                    $("#dialog").dialog("option", "position", {my: "center", at: "center", of: window});
+                });
+                $( "#startButton" ).click(function() {
+                    $(this).parents(".ui-dialog-content").dialog('close');
+                });
+                /* Create the help dialog. */
+                $( "#dialog" ).dialog();
+                $( "#dialog" ).on('dialogclose', function(event) {
+                    /* When the dialog is closed bootstrap the game for the
+                     * first time.
+                     */
+                    gameResume();
+                    $(window).focus(gameResume);
+                });
+                /* Setup dropped callbacks for the category boxes. */
+                $( "#element" ).droppable({
+                  drop: droppedElement
+                });
+                $( "#compound" ).droppable({
+                  drop: droppedElement
+                });
+                $( "#mixture" ).droppable({
+                  drop: droppedElement
+                });
+            } );
+            /* When the window goes out of focus pause the game by stopping the
+             * two loops.
+             */
+            $(window).blur(function() {
+                clearTimeout(timeout[0]);
+                clearTimeout(timeout[1]);
+            });
+            
+            
+        </script>
+    </head>
+    <body>
+        <div id="lostDialog" title="Sorry, you lost.">
+            Nice work! Unfortunately, you dropped too many elements in a row.
+            <p>
+            You can refresh the page to try again!
+        </div>
+        <div id="dialog" title="How to play">
+            Various items will roll onto your screen via the conveyor belt.
+            <p>
+            Drag the item to the right category box at the top of the screen!
+            <p>
+            If you take too long or let go of the item you'll lose points.
+            <p>
+            Try to get the highest score possible!
+            <p>
+            <center>
+                <button id="startButton" class="ui-button ui-widget ui-corner-all">Start!</button>
+            </center>
+        </div>
+        <div id="root-container">
+            
+            <div id="conveyor-area">
+                <img id="conveyor-belt" src="conveyor.svg" alt="Conveyor belt"/>
+            </div>
+            <center>
+                 <h1>Element Extravaganza</h1>
+                <div class="categories">
+                    <div class="elements">
+                        <div class="element-type" id="element">
+
+                            <div class="box-type">E</div>
+                            <div class="box-description">Element</div>
+                        </div>
+                        <div class="element-type" id="compound">
+                            <div class="box-type">C</div>
+                            <div class="box-description">Compound</div>
+                        </div>
+                        <div class="element-type" id="mixture">
+                            <div class="box-type">M</div>
+                            <div class="box-description">Mixture</div>
+                        </div>
+                    </div>
+                </div>
+               <div id="scoreText">Score: 0</div>
+            </center>
+        </div>
+    </body>
+</html>
